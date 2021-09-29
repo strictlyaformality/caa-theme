@@ -1,0 +1,90 @@
+.nav {
+    @apply border-b-4 border-blue font-display font-semibold w-full flex flex-row items-stretch sm:justify-between lg:justify-start lg:pl-8 xl:pr-8 bg-gray-100;
+}
+
+.nav__brand {
+    @apply flex items-center text-2xl gap-5 py-4;
+}
+
+.nav__list {
+    @apply items-stretch ml-auto hidden lg:flex;
+}
+
+.nav__list-item {
+    @apply flex items-stretch;
+}
+
+.nav__list-item-link {
+    @apply flex items-center px-5 text-lg hover:bg-gray-200 transition-colors duration-300;
+}
+
+.nav__icon-button {
+    @apply text-2xl px-5 flex items-center hover:bg-gray-200;
+}
+
+.nav__donate {
+    @apply ml-5 self-center hidden xl:inline;
+}
+
+.nav__donate--floating {
+    box-shadow: 2px 6px 15px rgb(0 0 0 / 75%);
+}
+
+.nav__menu {
+    @apply z-10 h-screen w-1/4 bg-gray-100 fixed right-0 top-0 flex flex-col transition-transform duration-300 ease-in-out;
+    transform: translateX(100%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 80%);
+}
+
+.nav__menu > .nav__list {
+    @apply flex flex-col ml-0;
+}
+
+.nav__menu > .nav__list > .nav__list-item > .nav__list-item-link {
+    @apply flex-1 justify-center p-4 text-xl;
+}
+
+.nav__menu > .nav__donate {
+    @apply flex mt-auto rounded-none self-auto p-4 justify-center items-center text-xl;
+}
+
+.nav__menu--open {
+    transform: translateX(0);
+}
+
+.nav__menu-header {
+    
+}
+
+.nav__menu-mask {
+    @apply z-0 fixed top-0 left-0 w-screen h-screen bg-gray-500 opacity-0 transition-opacity duration-300;
+    transform: translateX(100%);
+}
+
+.nav__menu-mask--displayed {
+    @apply opacity-80;
+    transform: translateX(0);
+}
+
+.nav__search {
+    @apply h-screen w-screen fixed top-0 left-0 bg-gray-300 bg-opacity-90 z-30 transition-transform duration-300 ease-in-out;
+    transform: translateY(-100%);
+}
+
+.nav__search--open {
+    @apply block;
+    transform: translateY(0);
+}
+
+.nav__search-controls {
+    @apply w-full bg-white border-b-4 border-gray-900 flex bg-opacity-80;
+}
+
+.nav__search-input {
+    @apply h-20 flex-1 text-3xl font-display font-semibold outline-none;
+    background-color: transparent;
+}
+
+.nav__search-input::placeholder {
+    @apply text-gray-600;
+}

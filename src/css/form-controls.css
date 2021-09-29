@@ -1,0 +1,11 @@
+.btn {
+    @apply font-semibold py-2 px-4 rounded transition-colors duration-300;
+}
+
+.btn-primary {
+    @apply bg-blue text-gray-100;
+}
+
+.btn-primary:hover {
+    @apply bg-blue-dark;
+}
