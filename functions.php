@@ -18,3 +18,84 @@ function init_features() {
 }
 
 add_action('after_setup_theme', 'init_features');
+
+function register_post_types() {
+    register_post_type('event', array(
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'public' => true,
+        'supports' => array('title', 'editor', 'excerpt'),
+        'rewrite' => array(
+            'slug' => 'events'
+        ),
+        'labels' => array(
+            'name' => 'Events',
+            'all_items' => 'All Events',
+            'add_new' => 'Add New Event',
+            'edit_item' => 'Edit Event',
+            'singular_name' => 'Event'
+        ),
+        'menu_icon' => 'dashicons-calendar-alt'
+    ));
+
+    register_post_type('program', array(
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'public' => true,
+        'supports' => array('title', 'editor', 'excerpt'),
+        'rewrite' => array(
+            'slug' => 'programs'
+        ),
+        'labels' => array(
+            'name' => 'Programs',
+            'all_items' => 'All Programs',
+            'add_new' => 'Add New Program',
+            'edit_item' => 'Edit Program',
+            'singular_name' => 'Program'
+        ),
+        'menu_icon' => 'dashicons-book-alt'
+    ));
+
+    register_post_type('location', array(
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'public' => true,
+        'supports' => array('title', 'editor'),
+        'rewrite' => array(
+            'slug' => 'locations'
+        ),
+        'labels' => array(
+            'name' => 'Locations',
+            'all_items' => 'All Locations',
+            'add_new' => 'Add New Location',
+            'edit_item' => 'Edit Location',
+            'singular_name' => 'Location'
+        ),
+        'menu_icon' => 'dashicons-location-alt'
+    ));
+
+    register_post_type('staff', array(
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'public' => true,
+        'supports' => array('title', 'editor'),
+        'labels' => array(
+            'name' => 'Staff',
+            'all_items' => 'All Staff',
+            'add_new' => 'Add New Staff Member',
+            'edit_item' => 'Edit Staff Member',
+            'singular_name' => 'Staff Member'
+        ),
+        'menu_icon' => 'dashicons-groups'
+    ));
+}
+
+add_action('init', 'register_post_types');
+
+function acf_save_point($path) {
+    $path = get_stylesheet_directory() . '/acf-json';
+
+    return $path;
+}
+
+add_filter('acf/settings/save_json', 'acf_save_point');
