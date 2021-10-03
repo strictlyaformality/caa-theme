@@ -2,10 +2,7 @@ const mix = require('laravel-mix');
 
 mix
     .js('src/index.js', 'dist/js')
-    .postCss('src/css/theme.css', 'dist/css', [
-        require('postcss-nested'),
-        require('tailwindcss')
-    ])
+    .sass('src/scss/theme.scss', 'dist/css')
     .options({
         processCssUrls: false
     });

@@ -1,9 +1,0 @@
-/* Vendor */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-/* Custom */
-@import 'nav';
-@import 'content-row';
-@import 'form-controls';

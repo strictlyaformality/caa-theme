@@ -10,7 +10,7 @@
         </style>
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class('bg-gray-200 text-gray-900 font-body bg-repeat relative'); ?>>
-        <header class="w-full sticky top-0">
+    <body <?php body_class('container-fluid px-0'); ?>>
+        <header class="sticky-top">
             <?php get_template_part('template-parts/top-nav'); ?>
         </header>
