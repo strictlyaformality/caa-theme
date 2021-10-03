@@ -10,6 +10,21 @@ $enable-responsive-font-sizes: true;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-// .nav-title {
-//     @include font-size(2rem);
-// }
+.header {
+    z-index: $zindex-modal-backdrop;
+}
+
+.bottom-nav-item {
+    @extend 
+        .border-top, 
+        .border-2, 
+        .border-dark;
+    flex: 1 0 0%;
+}
+
+.bottom-nav-item:not(:last-child) {
+    @extend
+        .border-end,
+        .border-2,
+        .border-dark
+}
