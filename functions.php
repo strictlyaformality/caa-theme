@@ -24,7 +24,7 @@ function register_post_types() {
         'show_in_rest' => true,
         'has_archive' => true,
         'public' => true,
-        'supports' => array('title', 'editor', 'excerpt'),
+        'supports' => array('thumbnail', 'title', 'editor', 'excerpt'),
         'rewrite' => array(
             'slug' => 'events'
         ),
@@ -42,7 +42,7 @@ function register_post_types() {
         'show_in_rest' => true,
         'has_archive' => true,
         'public' => true,
-        'supports' => array('title', 'editor', 'excerpt'),
+        'supports' => array('thumbnail', 'title', 'editor', 'excerpt'),
         'rewrite' => array(
             'slug' => 'programs'
         ),
@@ -78,7 +78,7 @@ function register_post_types() {
         'show_in_rest' => true,
         'has_archive' => true,
         'public' => true,
-        'supports' => array('title', 'editor'),
+        'supports' => array('thumbnail', 'title', 'editor'),
         'labels' => array(
             'name' => 'Staff',
             'all_items' => 'All Staff',

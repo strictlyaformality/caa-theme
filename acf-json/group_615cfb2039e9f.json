@@ -1,25 +1,31 @@
 {
-    "key": "group_6154fe5577bb6",
-    "title": "Is this an organization branch?",
+    "key": "group_615cfb2039e9f",
+    "title": "Location",
     "fields": [
         {
-            "key": "field_6154fe5fd7951",
-            "label": "Is this a location for an organization branch?",
-            "name": "is_organization_branch",
-            "type": "true_false",
+            "key": "field_615cfb2c682f1",
+            "label": "Location",
+            "name": "location",
+            "type": "relationship",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "post_type": [
+                "location"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 1,
+            "return_format": "object"
         }
     ],
     "location": [
@@ -27,7 +33,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "location"
+                "value": "event"
             }
         ]
     ],
@@ -39,5 +45,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633483877
+    "modified": 1633483959
 }

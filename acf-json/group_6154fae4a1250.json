@@ -124,7 +124,7 @@
                 "WI": "WI",
                 "WY": "WY"
             },
-            "default_value": false,
+            "default_value": "MA",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -171,5 +171,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632962954
+    "modified": 1633483896
 }

@@ -1,4 +1,4 @@
-<div id="nav-list" class="offcanvas offcanvas-end">
+<div id="nav-list" class="shadow-none offcanvas offcanvas-end">
     <div class="offcanvas-header">
         <?php get_template_part('template-parts/top-nav', 'logo', array('title_markup' => '<h3>Children Across America</h3>')); ?>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
