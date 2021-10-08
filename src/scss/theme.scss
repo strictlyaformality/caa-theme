@@ -11,6 +11,42 @@ $enable-shadows: true;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+@for $i from 1 through 6 {
+    .flex-#{$i} {
+        flex: #{$i} !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+        .flex-sm-#{$i} {
+            flex: #{$i} !important;
+        }   
+    }
+
+    @include media-breakpoint-up(md) {
+        .flex-md-#{$i} {
+            flex: #{$i} !important;
+        }   
+    }
+
+    @include media-breakpoint-up(lg) {
+        .flex-lg-#{$i} {
+            flex: #{$i} !important;
+        }   
+    }
+
+    @include media-breakpoint-up(xl) {
+        .flex-xl-#{$i} {
+            flex: #{$i} !important;
+        }   
+    }
+
+    @include media-breakpoint-up(xxl) {
+        .flex-xxl-#{$i} {
+            flex: #{$i} !important;
+        }   
+    }
+}
+
 .header {
     z-index: $zindex-modal-backdrop;
 }

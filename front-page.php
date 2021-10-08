@@ -13,7 +13,7 @@
                 <button type="button" class="btn btn-lg btn-primary">
                     Learn More
                 </button>
-                <button type="button" class="btn btn-lg btn-light">
+                <button type="button" class="btn btn-lg btn-outline-light">
                     Get Involved
                 </button>
             </div>

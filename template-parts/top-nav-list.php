@@ -26,7 +26,8 @@
             <?php 
                 get_template_part('template-parts/top-nav', 'item', array(
                     'item_class_list' => 'fs-5 px-2 py-3 py-xxl-0',
-                    'text' => 'Events'
+                    'text' => 'Events',
+                    'href' => get_post_type_archive_link('event')
                 ));
             ?>
         </ul>
