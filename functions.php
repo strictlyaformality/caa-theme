@@ -92,6 +92,40 @@ function register_post_types() {
 
 add_action('init', 'register_post_types');
 
+function transform_page_query($query) {
+    if (!is_admin() and $query->is_main_query()) {
+        if (is_post_type_archive('event')) {
+            $today = date('Ymd');            
+
+            $query->set('order', 'ASC');
+
+            $query->set('meta_query', array(
+                'relation' => 'AND',
+                'start_date' => array(
+                    'key' => 'starts_on',
+                    'compare' => '>=',
+                    'value' => $today,
+                    'type' => 'numeric'
+                ),
+                'start_time' => array(
+                    'key' => 'starts_at'
+                ),
+                'end_time' => array(
+                    'key' => 'ends_at'
+                )
+            ));
+
+            $query->set('orderby', array(
+                'start_date' => 'ASC',
+                'start_time' => 'ASC',
+                'end_time' => 'ASC'
+            ));
+        }
+    }
+}
+
+add_action('pre_get_posts', 'transform_page_query');
+
 function acf_save_point($path) {
     $path = get_stylesheet_directory() . '/acf-json';
 
