@@ -11,6 +11,6 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class('container-fluid px-0'); ?>>
-        <header class="header sticky-top">
+        <header id="page-header" class="header sticky-top">
             <?php get_template_part('template-parts/top-nav'); ?>
         </header>

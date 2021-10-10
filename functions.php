@@ -15,6 +15,7 @@ function init_features() {
     add_theme_support('custom-logo');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+    add_image_size('page-banner', 1024, 768);
 }
 
 add_action('after_setup_theme', 'init_features');

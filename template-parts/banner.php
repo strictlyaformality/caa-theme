@@ -13,7 +13,7 @@
         background: linear-gradient(rgb(0 0 0 / 70%), rgb(0 0 0 / 70%)), 
             url(<?php echo $args['background_url'] ?>);
 
-        background-position: center top;
+        background-position: center center;
     }
 </style>
 

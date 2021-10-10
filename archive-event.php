@@ -61,19 +61,24 @@
                     <?php echo get_field('location')[0]->post_title; ?>
                 </span>
             </span>
-            <?php 
-                $fee = get_field('admission_fee');
-                if ($fee) {
-            ?>
-                <span class="d-flex align-items-center gap-2">
-                    <i class="fas fa-lg fa-dollar-sign text-primary text-center flex-1"></i>
-                    <span class="fs-5 flex-6">
-                        <?php echo number_format($fee, 2); ?>
-                    </span>
+            <span class="d-flex align-items-center gap-2">
+                <i class="fas fa-lg fa-dollar-sign text-primary text-center flex-1"></i>
+                <span class="fs-5 flex-6">
+                    <?php if (get_field('is_free')) { ?>
+                        <span class="fw-bold">
+                            FREE
+                        </span>
+                    <?php } elseif (get_field('admission_fee')) { ?>
+                        <?php echo number_format(get_field('admission_fee'), 2); ?>
+                    <?php } else { ?>
+                        <span class="fst-italic">
+                            See details
+                        </span>
+                    <?php } ?>
                 </span>
-            <?php } ?>
+            </span>
             <a href="<?php the_permalink(); ?>" class="mt-auto btn btn-primary">
-                More Info
+                View Details
             </a>
         </div>
     </div>
